@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .card{
+                box-shadow:0 0 10px red;
+                padding:10px;
+                width: 270px;
+                height: 400px;
+            }
+            #cardContainer{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        </style>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var imageUrl = "https://i.pinimg.com/originals/e3/7e/0e/e37e0e25686c2139b281a57a5b4906f2.jpg"
+        let card =( 
+            <div class="card">
+               <img src={imageUrl} width="100%" height="250"/>
+               <h3>Vinay pd </h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quo!</p>
+               <button>Profile Details</button>
+            </div>
+        );
+         
+        let container =(
+            <div id ="cardContainer"> 
+                {card}
+                {card}
+                {card}
+                {card}
+            </div>
+        );
+       ReactDOM.render(container,document.getElementById("root"));
+    </script>
+</body>
+</html>

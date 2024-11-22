@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .card{
+                box-shadow:0 0 10px blue;
+                padding:10px;
+                width: 270px;
+                height: 400px;
+            }
+            #cardContainer{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        </style>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function createCard(name,imageUrl) {
+              //  var imageUrl = "https://i.pinimg.com/originals/e3/7e/0e/e37e0e25686c2139b281a57a5b4906f2.jpg";
+                //JSX code to create a card
+                return (
+                    <div class="card">
+                    <img src={imageUrl} width="100%" height="250"/>
+                    <h3>{name}</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quo!</p>
+                    <button>Profile Details</button>
+                 </div>
+                );
+            }
+              
+            function multipleCard(){
+                return (
+                    <div id="cardContainer">
+                        {createCard("Rahul","https://tse4.mm.bing.net/th/id/OIP.dQKmLGYl3kucD13lv2QOuAHaJQ?w=195&h=244&c=7&r=0&o=5&dpr=1.5&pid=1.7")}
+                        {createCard("Vinay sai","https://tse4.mm.bing.net/th/id/OIP.u3PvqWDYqJVqIc8oEc2FQQHaLH?w=195&h=292&c=7&r=0&o=5&dpr=1.5&pid=1.7")}
+                        {createCard("Naveen","https://tse3.mm.bing.net/th/id/OIP.llOll-AnN6sOhaUMDVbkCgHaKS?w=195&h=270&c=7&r=0&o=5&dpr=1.5&pid=1.7")}
+                        {createCard("Siva kumar","https://tse3.mm.bing.net/th/id/OIP.MGYgU-AlH_ihmFEHTOCcJwHaLH?w=195&h=293&c=7&r=0&o=5&dpr=1.5&pid=1.7")}
+                    </div>
+
+                );
+            }  
+            
+            ReactDOM.render(multipleCard(),document.getElementById("root"));     
+    </script>
+</body>
+</html>

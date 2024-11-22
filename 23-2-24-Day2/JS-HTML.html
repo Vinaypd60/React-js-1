@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS LIST</title>
+    </head>
+    <body>
+        <h2>List in JS</h2>
+        <script>
+           function createList(){
+            var olDomElement = document.createElement("ol"); //<ol></ol>
+           
+           var liDomElement1 = document.createElement("li");
+           var liDomElement2 = document.createElement("li");
+           var liDomElement3 = document.createElement("li");
+           var liDomElement4 = document.createElement("li");
+           var liDomElement5 = document.createElement("li");
+
+           olDomElement.appendChild(liDomElement1);
+           olDomElement.appendChild(liDomElement2);
+           olDomElement.appendChild(liDomElement3);
+           olDomElement.appendChild(liDomElement4);
+           olDomElement.appendChild(liDomElement5);
+
+           liDomElement1.innerText = "Apple";
+           liDomElement2.innerText = "Samsung";
+           liDomElement3.innerText = "Vivo";
+           liDomElement4.innerText = "Oneplus";
+           liDomElement5.innerText = "Nokia";
+
+           //add orderlist with list items in the DOM
+           document.querySelector("body").appendChild(olDomElement);
+
+           }
+           createList();
+           createList();
+           createList();
+           createList();
+        </script>
+    </body>
+</html>
